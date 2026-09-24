@@ -1,0 +1,357 @@
+/* ============================================================
+   Home.css — Landing page PPID Bakorwil I Madiun
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ══════════════════════════════════════════════════
+   HERO SECTION
+══════════════════════════════════════════════════ */
+.ppid-hero {
+  background: linear-gradient(135deg, #0d9aa6 0%, #1a5fb4 60%, #0a5a9e 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 24px 80px;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Dekorasi lingkaran di background */
+.ppid-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 20% 50%, rgba(255,255,255,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 80% 30%, rgba(13,154,166,0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Grid dot pattern overlay */
+.ppid-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.ppid-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.ppid-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.ppid-hero__title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.ppid-hero__title span {
+  color: #7df0f8;
+}
+
+.ppid-hero__subtitle {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 36px;
+  line-height: 1.7;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ppid-hero__cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ppid-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.ppid-hero__btn--primary {
+  background: #fff;
+  color: #0d9aa6;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.ppid-hero__btn--primary:hover {
+  background: #e8fafb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
+
+.ppid-hero__btn--secondary {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+.ppid-hero__btn--secondary:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════════════════
+   QUICK LINKS — 4 card menu
+══════════════════════════════════════════════════ */
+.ppid-quicklinks {
+  background: #f5fbfc;
+  padding: 60px 24px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.ppid-quicklinks__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ppid-section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ppid-section-header__overline {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0d9aa6;
+  margin-bottom: 8px;
+}
+
+.ppid-section-header__title {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  color: #1e3540;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.ppid-section-header__desc {
+  font-size: 0.9rem;
+  color: #5e8694;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.ppid-quicklinks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ppid-ql-card {
+  background: #fff;
+  border: 1px solid #d0eaed;
+  border-radius: 14px;
+  padding: 28px 20px 24px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 12px rgba(13,154,166,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.ppid-ql-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0d9aa6, #1a5fb4);
+  opacity: 0;
+  transition: opacity 0.22s;
+}
+
+.ppid-ql-card:hover {
+  border-color: #0d9aa6;
+  box-shadow: 0 8px 32px rgba(13,154,166,0.15);
+  transform: translateY(-4px);
+}
+.ppid-ql-card:hover::before {
+  opacity: 1;
+}
+
+.ppid-ql-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.ppid-ql-card__icon--teal    { background: #e0f7f8; }
+.ppid-ql-card__icon--blue    { background: #dbeafe; }
+.ppid-ql-card__icon--indigo  { background: #e0e7ff; }
+.ppid-ql-card__icon--green   { background: #dcfce7; }
+
+.ppid-ql-card__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e3540;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ppid-ql-card__desc {
+  font-size: 0.8rem;
+  color: #5e8694;
+  margin: 0;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.ppid-ql-card__arrow {
+  font-size: 0.75rem;
+  color: #0d9aa6;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  transition: gap 0.18s;
+}
+.ppid-ql-card:hover .ppid-ql-card__arrow {
+  gap: 8px;
+}
+
+/* ══════════════════════════════════════════════════
+   INFO STRIP — UU Keterbukaan Informasi
+══════════════════════════════════════════════════ */
+.ppid-infostrip {
+  background: linear-gradient(135deg, #0a818b 0%, #1248a0 100%);
+  padding: 48px 24px;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.ppid-infostrip__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.ppid-infostrip__text h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.ppid-infostrip__text p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  margin: 0 0 24px;
+}
+
+.ppid-infostrip__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+.ppid-infostrip__link:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.ppid-infostrip__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ppid-stat-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.ppid-stat-card__num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #7df0f8;
+  margin-bottom: 4px;
+}
+
+.ppid-stat-card__label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .ppid-quicklinks__grid { grid-template-columns: repeat(2, 1fr); }
+  .ppid-infostrip__inner { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 540px) {
+  .ppid-hero { padding: 48px 16px 56px; }
+  .ppid-quicklinks { padding: 40px 16px; }
+  .ppid-quicklinks__grid { grid-template-columns: 1fr; gap: 14px; }
+  .ppid-ql-card { flex-direction: row; padding: 18px 16px; }
+  .ppid-ql-card__icon { flex-shrink: 0; }
+  .ppid-infostrip { padding: 36px 16px; }
+  .ppid-infostrip__stats { grid-template-columns: 1fr 1fr; gap: 12px; }
+}

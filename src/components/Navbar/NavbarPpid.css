@@ -1,0 +1,347 @@
+/* ============================================================
+   NavbarPpid.css — PPID Bakorwil I Madiun
+   Desain senada dengan S1MB4-Frontend (teal, Inter font)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --nav-teal:       #0d9aa6;
+  --nav-teal-dark:  #0a7f8a;
+  --nav-white:      #ffffff;
+  --nav-font:       'Inter', system-ui, sans-serif;
+  --nav-transition: 0.18s ease;
+}
+
+/* ── Site header (non-sticky: topbar) ── */
+.ppid-site-header {
+  width: 100%;
+  font-family: var(--nav-font);
+}
+
+/* ══════════════════════════════════════════════════
+   TOP BAR — logo + brand + link kembali
+══════════════════════════════════════════════════ */
+.ppid-topbar {
+  background: #ffffff;
+  border-bottom: 1px solid #dde;
+  min-height: 68px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ppid-topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ppid-topbar__logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.ppid-topbar__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.ppid-topbar__label {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ppid-topbar__name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0d9aa6;
+  letter-spacing: 0.01em;
+}
+
+.ppid-topbar__name span {
+  color: #1a5fb4;
+}
+
+/* Link kembali ke situs utama */
+.ppid-topbar__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #5e8694;
+  text-decoration: none;
+  border: 1.5px solid #d0eaed;
+  border-radius: 999px;
+  padding: 6px 14px;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ppid-topbar__back:hover {
+  background: var(--nav-teal);
+  color: #fff;
+  border-color: var(--nav-teal);
+}
+.ppid-topbar__back svg {
+  transition: transform 0.18s;
+}
+.ppid-topbar__back:hover svg {
+  transform: translateX(-3px);
+}
+
+/* ══════════════════════════════════════════════════
+   NAVBAR — sticky teal bar
+══════════════════════════════════════════════════ */
+.ppid-navbar {
+  background: var(--nav-teal);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--nav-font);
+}
+
+/* ── Menu list ── */
+.ppid-nav-menu {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 44px;
+}
+
+.ppid-nav-item {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+/* ── Nav link shared ── */
+.ppid-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--nav-white);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--nav-transition);
+  min-height: 44px;
+  text-transform: uppercase;
+}
+
+.ppid-nav-link:hover,
+.ppid-nav-link:focus-visible {
+  background: rgba(0,0,0,0.12);
+  outline: none;
+}
+
+/* Caret */
+.ppid-dropdown-caret {
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+/* ══════════════════════════════════════════════════
+   DROPDOWN
+══════════════════════════════════════════════════ */
+.ppid-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 210px;
+  background: #fff;
+  border-top: 3px solid var(--nav-teal);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity var(--nav-transition),
+    visibility var(--nav-transition),
+    transform var(--nav-transition);
+  pointer-events: none;
+  z-index: 1100;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (min-width: 901px) {
+  .ppid-nav-item.has-dropdown:hover > .ppid-dropdown-menu,
+  .ppid-nav-item.has-dropdown:focus-within > .ppid-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.ppid-dropdown-link {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #1e3540;
+  text-decoration: none;
+  transition: background var(--nav-transition), color var(--nav-transition), padding-left var(--nav-transition);
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+}
+.ppid-dropdown-link:hover {
+  background: #f0fafb;
+  color: var(--nav-teal);
+  padding-left: 24px;
+  border-left-color: var(--nav-teal);
+}
+.ppid-dropdown-link:focus-visible {
+  outline: 2px solid var(--nav-teal);
+  outline-offset: -2px;
+}
+
+/* ══════════════════════════════════════════════════
+   HAMBURGER
+══════════════════════════════════════════════════ */
+.ppid-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.ppid-hamburger:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+.ppid-hamburger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--nav-white);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s;
+  transform-origin: center;
+}
+.ppid-hamburger.active .ppid-hamburger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.ppid-hamburger.active .ppid-hamburger-bar:nth-child(2) { opacity: 0; }
+.ppid-hamburger.active .ppid-hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ══════════════════════════════════════════════════
+   RESPONSIVE — Mobile ≤ 900px
+══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .ppid-hamburger { display: flex; }
+  .ppid-topbar__logo { height: 42px; }
+
+  .ppid-navbar { position: sticky; top: 0; z-index: 1000; }
+
+  .ppid-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+    background: var(--nav-teal-dark);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+    z-index: 300;
+  }
+  .ppid-nav-menu.open {
+    max-height: 600px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .ppid-nav-item { flex-direction: column; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+  .ppid-nav-link { padding: 12px 16px; font-size: 0.82rem; justify-content: space-between; min-height: unset; }
+
+  .ppid-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-top: none;
+    border-radius: 0;
+    background: rgba(0,0,0,0.15);
+    pointer-events: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0;
+  }
+  .ppid-nav-item.mobile-open > .ppid-dropdown-menu {
+    max-height: 400px;
+    padding: 4px 0;
+  }
+
+  .ppid-dropdown-link {
+    color: rgba(255,255,255,0.9);
+    padding: 10px 16px 10px 32px;
+    border-left: none;
+  }
+  .ppid-dropdown-link:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    padding-left: 36px;
+    border-left: none;
+  }
+
+  /* Sembunyikan teks "Kembali" di mobile kecil */
+  .ppid-topbar__back-label { display: none; }
+  .ppid-topbar__back { padding: 6px 10px; }
+}
+
+@media (max-width: 480px) {
+  .ppid-topbar__text { display: none; }
+  .ppid-topbar__logo { height: 38px; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ppid-navbar, .ppid-nav-link, .ppid-dropdown-menu, .ppid-hamburger-bar, .ppid-nav-menu {
+    transition: none;
+  }
+}
