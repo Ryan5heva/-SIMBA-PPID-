@@ -260,90 +260,12 @@
   gap: 8px;
 }
 
-/* ══════════════════════════════════════════════════
-   INFO STRIP — UU Keterbukaan Informasi
-══════════════════════════════════════════════════ */
-.ppid-infostrip {
-  background: linear-gradient(135deg, #0a818b 0%, #1248a0 100%);
-  padding: 48px 24px;
-  font-family: 'Inter', system-ui, sans-serif;
-}
-
-.ppid-infostrip__inner {
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.ppid-infostrip__text h2 {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 800;
-  color: #fff;
-  margin: 0 0 16px;
-  letter-spacing: -0.02em;
-}
-
-.ppid-infostrip__text p {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  line-height: 1.75;
-  margin: 0 0 24px;
-}
-
-.ppid-infostrip__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.15);
-  border: 1.5px solid rgba(255,255,255,0.3);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.18s;
-}
-.ppid-infostrip__link:hover {
-  background: rgba(255,255,255,0.25);
-}
-
-.ppid-infostrip__stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.ppid-stat-card {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-}
-
-.ppid-stat-card__num {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #7df0f8;
-  margin-bottom: 4px;
-}
-
-.ppid-stat-card__label {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.75);
-  font-weight: 500;
-}
 
 /* ══════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════ */
 @media (max-width: 900px) {
   .ppid-quicklinks__grid { grid-template-columns: repeat(2, 1fr); }
-  .ppid-infostrip__inner { grid-template-columns: 1fr; gap: 32px; }
 }
 
 @media (max-width: 540px) {
@@ -352,6 +274,4 @@
   .ppid-quicklinks__grid { grid-template-columns: 1fr; gap: 14px; }
   .ppid-ql-card { flex-direction: row; padding: 18px 16px; }
   .ppid-ql-card__icon { flex-shrink: 0; }
-  .ppid-infostrip { padding: 36px 16px; }
-  .ppid-infostrip__stats { grid-template-columns: 1fr 1fr; gap: 12px; }
 }

@@ -172,19 +172,13 @@ export default function NavbarPpid() {
       <header className="ppid-site-header">
         <div className="ppid-topbar">
 
-          {/* Brand: logo + teks */}
+          {/* Brand: logo saja */}
           <Link to="/" className="ppid-topbar__brand" aria-label="Beranda PPID Bakorwil I Madiun">
             <img
               src={logoBarkorwil}
               alt="Logo Bakorwil I Madiun"
               className="ppid-topbar__logo"
             />
-            <div className="ppid-topbar__text">
-              <span className="ppid-topbar__label">Pejabat Pengelola Informasi dan Dokumentasi</span>
-              <span className="ppid-topbar__name">
-                PPID <span>BAKORWIL I MADIUN</span>
-              </span>
-            </div>
           </Link>
 
           {/* Tombol kembali ke situs utama */}

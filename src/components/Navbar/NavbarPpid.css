@@ -335,7 +335,6 @@
 }
 
 @media (max-width: 480px) {
-  .ppid-topbar__text { display: none; }
   .ppid-topbar__logo { height: 38px; }
 }
 

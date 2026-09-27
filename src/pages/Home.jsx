@@ -7,7 +7,6 @@ import './Home.css';
  * Berisi:
  *  1. Hero section dengan branding PPID
  *  2. Quick-link cards ke 4 menu utama
- *  3. Info strip UU Keterbukaan Informasi Publik
  */
 
 const QUICK_LINKS = [
@@ -41,12 +40,6 @@ const QUICK_LINKS = [
   },
 ];
 
-const STATS = [
-  { num: 'UU 14', label: 'Tahun 2008 tentang KIP' },
-  { num: '4', label: 'Kategori Informasi Publik' },
-  { num: '1', label: 'Pintu Layanan Informasi' },
-  { num: '0', label: 'Pungutan Biaya' },
-];
 
 export default function Home() {
   return (
@@ -108,41 +101,6 @@ export default function Home() {
                   <span className="ppid-ql-card__arrow">Selengkapnya →</span>
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══ INFO STRIP ══ */}
-      <section className="ppid-infostrip" aria-labelledby="ppid-info-title">
-        <div className="ppid-infostrip__inner">
-          <div className="ppid-infostrip__text">
-            <h2 id="ppid-info-title">
-              Keterbukaan Informasi Publik adalah Hak Warga Negara
-            </h2>
-            <p>
-              Berdasarkan UU No. 14 Tahun 2008, setiap orang berhak memperoleh
-              informasi publik yang cepat, tepat waktu, biaya ringan, dan cara
-              sederhana. PPID Bakorwil I Madiun hadir sebagai wujud komitmen
-              pemerintah dalam transparansi dan akuntabilitas publik.
-            </p>
-            <a
-              href="https://www.komisiinformasi.go.id"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ppid-infostrip__link"
-            >
-              <span aria-hidden="true">↗</span>
-              Komisi Informasi Pusat
-            </a>
-          </div>
-
-          <div className="ppid-infostrip__stats" aria-label="Statistik PPID">
-            {STATS.map((s) => (
-              <div key={s.label} className="ppid-stat-card">
-                <div className="ppid-stat-card__num">{s.num}</div>
-                <div className="ppid-stat-card__label">{s.label}</div>
-              </div>
             ))}
           </div>
         </div>
