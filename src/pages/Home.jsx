@@ -49,7 +49,6 @@ export default function Home() {
       <section className="ppid-hero" aria-labelledby="ppid-hero-title">
         <div className="ppid-hero__inner">
           <div className="ppid-hero__badge">
-            <span aria-hidden="true">🏛️</span>
             Pejabat Pengelola Informasi dan Dokumentasi
           </div>
 
@@ -65,7 +64,6 @@ export default function Home() {
 
           <div className="ppid-hero__cta-group">
             <Link to="/layanan-informasi" className="ppid-hero__btn ppid-hero__btn--primary">
-              <span aria-hidden="true">📋</span>
               Ajukan Permohonan Informasi
             </Link>
             <Link to="/profil" className="ppid-hero__btn ppid-hero__btn--secondary">
@@ -79,7 +77,6 @@ export default function Home() {
       <section className="ppid-quicklinks" aria-labelledby="ppid-ql-title">
         <div className="ppid-quicklinks__inner">
           <div className="ppid-section-header">
-            <p className="ppid-section-header__overline">Navigasi Cepat</p>
             <h2 id="ppid-ql-title" className="ppid-section-header__title">
               Layanan & Informasi PPID
             </h2>

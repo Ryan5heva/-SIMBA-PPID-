@@ -7,7 +7,10 @@
    HERO SECTION
 ══════════════════════════════════════════════════ */
 .ppid-hero {
-  background: linear-gradient(135deg, #0d9aa6 0%, #1a5fb4 60%, #0a5a9e 100%);
+  /* [PERCOBAAN BIRU PUCAT] — background biru asli dikomentari di bawah, hapus komentar untuk revert */
+  background: linear-gradient(160deg, #f0f8ff 0%, #e8f4fd 60%, #dbeeff 100%);
+  /* [ABU-ABU] background: linear-gradient(135deg, #374151 0%, #4b5563 55%, #6b7280 100%); */
+  /* [BIRU TUA ASLI] background: linear-gradient(135deg, #0d9aa6 0%, #1a5fb4 60%, #0a5a9e 100%); */
   position: relative;
   overflow: hidden;
   padding: 72px 24px 80px;
@@ -21,8 +24,11 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 20% 50%, rgba(255,255,255,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 80% 30%, rgba(13,154,166,0.25) 0%, transparent 60%);
+    /* [PERCOBAAN BIRU PUCAT] overlay disesuaikan ke warna biru muda */
+    radial-gradient(ellipse 60% 70% at 20% 50%, rgba(13,154,166,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 80% 30%, rgba(26,95,180,0.08) 0%, transparent 60%);
+    /* [ABU-ABU] radial-gradient(ellipse 40% 50% at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 60%); */
+    /* [BIRU TUA ASLI] radial-gradient(ellipse 40% 50% at 80% 30%, rgba(13,154,166,0.25) 0%, transparent 60%); */
   pointer-events: none;
 }
 
@@ -31,7 +37,9 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  /* [PERCOBAAN BIRU PUCAT] dot diganti ke biru muda agar terlihat di bg terang */
+  background-image: radial-gradient(rgba(13,154,166,0.10) 1px, transparent 1px);
+  /* [ABU-ABU/BIRU TUA ASLI] background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px); */
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -47,13 +55,16 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
+  /* [PERCOBAAN BIRU PUCAT] badge disesuaikan ke warna gelap agar kontras di bg terang */
+  background: rgba(13,154,166,0.10);
+  border: 1px solid rgba(13,154,166,0.25);
+  /* [ABU-ABU/BIRU TUA ASLI] background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); */
   border-radius: 999px;
   padding: 6px 16px;
   font-size: 0.72rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: #0d6e78;
+  /* [ABU-ABU/BIRU TUA ASLI] color: rgba(255,255,255,0.9); */
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -62,19 +73,26 @@
 .ppid-hero__title {
   font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 800;
-  color: #fff;
+  /* [PERCOBAAN BIRU PUCAT] judul jadi gelap karena bg terang */
+  color: #0f2d4a;
+  /* [ABU-ABU/BIRU TUA ASLI] color: #fff; */
   margin: 0 0 8px;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }
 
 .ppid-hero__title span {
-  color: #7df0f8;
+  /* [PERCOBAAN BIRU PUCAT] aksen teal gelap, kontras bagus di bg biru pucat */
+  color: #0d9aa6;
+  /* [ABU-ABU] color: #fbbf24; */
+  /* [BIRU TUA ASLI] color: #7df0f8; */
 }
 
 .ppid-hero__subtitle {
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-  color: rgba(255,255,255,0.8);
+  /* [PERCOBAAN BIRU PUCAT] deskripsi jadi slate gelap */
+  color: #3d5a6e;
+  /* [ABU-ABU/BIRU TUA ASLI] color: rgba(255,255,255,0.8); */
   margin: 0 0 36px;
   line-height: 1.7;
   max-width: 540px;
@@ -106,23 +124,32 @@
 }
 
 .ppid-hero__btn--primary {
-  background: #fff;
-  color: #0d9aa6;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  /* [PERCOBAAN BIRU PUCAT] tombol primer jadi teal solid agar menonjol di bg terang */
+  background: #0d9aa6;
+  color: #fff;
+  /* [ABU-ABU] background: #fff; color: #374151; */
+  /* [BIRU TUA ASLI] background: #fff; color: #0d9aa6; */
+  box-shadow: 0 4px 20px rgba(13,154,166,0.30);
 }
 .ppid-hero__btn--primary:hover {
-  background: #e8fafb;
+  background: #0b8791;
+  /* [ABU-ABU] background: #f3f4f6; */
+  /* [BIRU TUA ASLI] background: #e8fafb; */
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 28px rgba(13,154,166,0.40);
 }
 
 .ppid-hero__btn--secondary {
-  background: rgba(255,255,255,0.12);
-  color: #fff;
-  border: 1.5px solid rgba(255,255,255,0.35);
+  /* [PERCOBAAN BIRU PUCAT] tombol sekunder jadi outline teal di bg terang */
+  background: transparent;
+  color: #0d9aa6;
+  border: 1.5px solid #0d9aa6;
+  /* [ABU-ABU/BIRU TUA ASLI] background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.35); */
 }
 .ppid-hero__btn--secondary:hover {
-  background: rgba(255,255,255,0.22);
+  /* [PERCOBAAN BIRU PUCAT] */
+  background: rgba(13,154,166,0.08);
+  /* [ABU-ABU/BIRU TUA ASLI] background: rgba(255,255,255,0.22); */
   transform: translateY(-2px);
 }
 
