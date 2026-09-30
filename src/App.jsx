@@ -10,6 +10,7 @@ import PpidSetiapSaat from './pages/PpidSetiapSaat';
 import PpidDikecualikan from './pages/PpidDikecualikan';
 import PpidLaporanAkses from './pages/PpidLaporanAkses';
 import PpidSeputar from './pages/PpidSeputar';
+import PpidKelembagaan from './pages/PpidKelembagaan';
 import PpidMaklumatPelayanan from './pages/PpidMaklumatPelayanan';
 import PpidLayananInformasi from './pages/PpidLayananInformasi';
 import PpidSimplePage from './pages/PpidSimplePage';
@@ -27,6 +28,7 @@ function App() {
 
         {/* ── Profil PPID ── */}
         <Route path="/profil" element={<PpidSeputar />} />
+        <Route path="/profil/kelembagaan" element={<PpidKelembagaan />} />
         <Route path="/profil/maklumat-pelayanan" element={<PpidMaklumatPelayanan />} />
 
         {/* ── Layanan Informasi ── */}

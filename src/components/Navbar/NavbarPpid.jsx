@@ -15,8 +15,11 @@ const NAV_ITEMS = [
     id: 'profil-ppid',
     label: 'Profil PPID',
     children: [
-      { label: 'Seputar PPID',        href: '/profil' },
-      { label: 'Maklumat Pelayanan',  href: '/profil/maklumat-pelayanan' },
+      { label: 'Seputar PPID',            href: '/profil' },
+      { label: 'Visi dan Misi PPID',      href: '/profil' },
+      { label: 'Kelembagaan PPID',        href: '/profil/kelembagaan' },
+      { label: 'Struktur Organisasi PPID', href: '/profil' },
+      { label: 'Maklumat Pelayanan',      href: '/profil/maklumat-pelayanan' },
     ],
   },
   {
