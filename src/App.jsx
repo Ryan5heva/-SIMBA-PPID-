@@ -13,6 +13,8 @@ import PpidSeputar from './pages/PpidSeputar';
 import PpidKelembagaan from './pages/PpidKelembagaan';
 import PpidMaklumatPelayanan from './pages/PpidMaklumatPelayanan';
 import PpidLayananInformasi from './pages/PpidLayananInformasi';
+import PpidPengajuanKeberatan from './pages/PpidPengajuanKeberatan';
+import PpidWewenang from './pages/PpidWewenang';
 import PpidSimplePage from './pages/PpidSimplePage';
 
 import './App.css';
@@ -33,6 +35,8 @@ function App() {
 
         {/* ── Layanan Informasi ── */}
         <Route path="/layanan-informasi" element={<PpidLayananInformasi />} />
+        <Route path="/pengajuan-keberatan" element={<PpidPengajuanKeberatan />} />
+        <Route path="/wewenang-ppid" element={<PpidWewenang />} />
 
         {/* ── Dokumen PPID ── */}
         <Route

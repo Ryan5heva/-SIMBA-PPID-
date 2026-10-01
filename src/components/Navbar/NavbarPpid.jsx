@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logoBarkorwil from '../../assets/logo-bakorwil-madiun.png';
 import './NavbarPpid.css';
 
@@ -25,7 +25,12 @@ const NAV_ITEMS = [
   {
     id: 'layanan-informasi',
     label: 'Layanan Informasi',
-    href: '/layanan-informasi',
+    children: [
+      { label: 'Permohonan Informasi Publik',           href: '/layanan-informasi' },
+      { label: 'Pengajuan Keberatan',                   href: '/pengajuan-keberatan' },
+      { label: 'Mekanisme/Proses',                      href: '/mekanisme-proses' },
+      { label: 'Pengaduan Penyalahgunaan Wewenang',     href: '/wewenang-ppid' },
+    ],
   },
   {
     id: 'dokumen-ppid',
@@ -136,6 +141,13 @@ export default function NavbarPpid() {
   const [mobileOpen, setMobileOpen] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef(null);
+  const { pathname } = useLocation();
+
+  /* Tutup semua menu saat route berubah */
+  useEffect(() => {
+    setMenuOpen(false);
+    setMobileOpen(null);
+  }, [pathname]);
 
   /* Deteksi mobile */
   useEffect(() => {

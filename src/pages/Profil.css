@@ -48,6 +48,8 @@
   margin: 0 0 8px;
   letter-spacing: -0.025em;
   line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 .pr-header__bar {
   width: 56px;
@@ -81,7 +83,9 @@
 }
 
 /* Kolom konten */
-.pr-content {}
+.pr-content {
+  min-width: 0; /* prevent grid blowout from non-wrapping children */
+}
 
 /* Kolom gambar/sidebar */
 .pr-sidebar {}

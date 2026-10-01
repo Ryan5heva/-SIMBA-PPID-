@@ -39,12 +39,32 @@ export default function PpidKelembagaan() {
                 Seputar Pejabat Pengelola Informasi dan Dokumentasi (PPID)
               </h1>
               <div className="pr-header__bar" aria-hidden="true" />
+              
+              {/* Meta: badge + tanggal + views */}
+              <div className="faq-meta" role="contentinfo" aria-label="Informasi dokumen" style={{ marginTop: '16px' }}>
+                <span className="faq-meta__badge" aria-label="Kategori: PPID">PPID</span>
+                <span className="faq-meta__dot" aria-hidden="true">·</span>
+                <time className="faq-meta__date" dateTime="2026-02-12">12 Feb 2026</time>
+                <span className="faq-meta__dot" aria-hidden="true">·</span>
+                <span className="faq-meta__views" aria-label="200 kali dilihat">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                    strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  200
+                </span>
+              </div>
             </header>
 
             {/* ═══════════════════════════════════════════
                 SECTION 1 — Pengantar & Klasifikasi
             ═══════════════════════════════════════════ */}
             <section className="pr-section" aria-labelledby="heading-pengantar">
+              <h2 className="pr-section__heading" id="heading-pengantar">
+                TENTANG PPID BAKORWIL I MADIUN
+              </h2>
               <div className="pr-info-card">
 
                 <p className="pr-section__text">
