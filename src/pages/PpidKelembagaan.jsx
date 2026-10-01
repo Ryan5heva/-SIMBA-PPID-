@@ -36,98 +36,25 @@ export default function PpidKelembagaan() {
             {/* ── Page header ── */}
             <header className="pr-header">
               <h1 className="pr-header__title">
-                Seputar Pejabat Pengelola Informasi dan Dokumentasi (PPID)
+                Kelembagaan Pejabat Pengelola Informasi dan Dokumentasi (PPID)
               </h1>
               <div className="pr-header__bar" aria-hidden="true" />
-              
-              {/* Meta: badge + tanggal + views */}
+
+              {/* Meta: badge PPID saja (data tanggal/views tidak tersedia) */}
               <div className="faq-meta" role="contentinfo" aria-label="Informasi dokumen" style={{ marginTop: '16px' }}>
                 <span className="faq-meta__badge" aria-label="Kategori: PPID">PPID</span>
-                <span className="faq-meta__dot" aria-hidden="true">·</span>
-                <time className="faq-meta__date" dateTime="2026-02-12">12 Feb 2026</time>
-                <span className="faq-meta__dot" aria-hidden="true">·</span>
-                <span className="faq-meta__views" aria-label="200 kali dilihat">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                    strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                  200
-                </span>
               </div>
             </header>
 
             {/* ═══════════════════════════════════════════
-                SECTION 1 — Pengantar & Klasifikasi
-            ═══════════════════════════════════════════ */}
-            <section className="pr-section" aria-labelledby="heading-pengantar">
-              <h2 className="pr-section__heading" id="heading-pengantar">
-                TENTANG PPID BAKORWIL I MADIUN
-              </h2>
-              <div className="pr-info-card">
-
-                <p className="pr-section__text">
-                  Pejabat Pengelola Informasi dan Dokumentasi (PPID) merupakan pejabat yang
-                  bertugas mengelola, menyimpan, mendokumentasikan, menyediakan, dan memberikan
-                  pelayanan informasi publik pada badan publik. Keberadaan PPID menjadi wujud
-                  pelaksanaan amanat Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan
-                  Informasi Publik, yang menjamin hak setiap orang untuk memperoleh informasi
-                  secara mudah, cepat, dan melalui satu pintu pelayanan.
-                </p>
-
-                <p className="pr-section__text">
-                  Di lingkungan Pemerintah Provinsi Jawa Timur, termasuk di Bakorwil I Madiun,
-                  PPID berperan penting dalam memastikan setiap informasi yang terbuka dapat
-                  diakses masyarakat. Selain itu, PPID juga mengoordinasikan pengumpulan bahan
-                  informasi, melakukan verifikasi, memperbarui data, serta menginventarisasi
-                  informasi yang dikecualikan. PPID Pembantu di masing-masing bidang atau unit
-                  kerja membantu pelaksanaan fungsi ini pada lingkupnya masing-masing.
-                </p>
-
-                <p className="pr-section__text">
-                  Informasi Publik adalah segala keterangan yang dihasilkan, disimpan, atau
-                  dikelola oleh badan publik dan berkaitan dengan penyelenggaraan pemerintahan
-                  maupun kepentingan masyarakat luas. Berdasarkan peraturan, informasi publik
-                  diklasifikasikan menjadi:
-                </p>
-
-                <ol className="pr-misi-plain" aria-label="Klasifikasi Informasi Publik">
-                  <li className="pr-misi-plain__item">Informasi yang wajib diumumkan secara berkala</li>
-                  <li className="pr-misi-plain__item">Informasi yang wajib diumumkan secara serta merta</li>
-                  <li className="pr-misi-plain__item">Informasi yang wajib tersedia setiap saat</li>
-                  <li className="pr-misi-plain__item">Informasi yang dikecualikan</li>
-                </ol>
-
-                <p className="pr-section__text" style={{ marginTop: '16px' }}>
-                  Badan Publik sendiri mencakup lembaga eksekutif, legislatif, yudikatif,
-                  maupun organisasi lain yang menjalankan fungsi penyelenggaraan negara dan
-                  dibiayai sebagian atau seluruhnya oleh APBN/APBD, sumbangan masyarakat,
-                  atau dana luar negeri.
-                </p>
-
-                <p className="pr-section__text">
-                  Sesuai ketentuan Undang-Undang dan Peraturan Komisi Informasi, setiap badan
-                  publik wajib menyediakan informasi publik yang akurat, benar, dan tidak
-                  menyesatkan, membangun sistem informasi yang efektif, serta menyediakan
-                  sarana dan prasarana layanan informasi yang memadai. Bakorwil I Madiun
-                  berkomitmen melaksanakan kewajiban tersebut, baik melalui layanan tatap muka,
-                  sarana informasi fisik, maupun media daring yang dapat diakses masyarakat.
-                </p>
-
-              </div>
-            </section>
-
-            {/* ═══════════════════════════════════════════
-                SECTION 2 — Kewajiban Badan Publik
+                SECTION 1 — Kewajiban Badan Publik
             ═══════════════════════════════════════════ */}
             <section className="pr-section" aria-labelledby="heading-kewajiban">
               <h2 className="pr-section__heading" id="heading-kewajiban">
                 KEWAJIBAN BADAN PUBLIK
               </h2>
 
-              {/* Satu pr-info-card berisi dua sub-bagian dengan divider — pola
-                  sama seperti card Kedudukan + Alamat di ProfilKedudukanAlamat */}
+              {/* Satu pr-info-card berisi dua sub-bagian dengan divider */}
               <div className="pr-info-card">
 
                 {/* Sub-bagian 1: Pasal 7 UU 14/2008 */}
@@ -138,31 +65,31 @@ export default function PpidKelembagaan() {
                   <li className="pr-misi-plain__item">
                     Badan Publik wajib menyediakan, memberikan dan/atau menerbitkan Informasi
                     Publik yang berada di bawah kewenangannya kepada Pemohon Informasi Publik,
-                    selain informasi yang dikecualikan sesuai dengan ketentuan
+                    selain informasi yang dikecualikan sesuai dengan ketentuan;
                   </li>
                   <li className="pr-misi-plain__item">
                     Badan Publik wajib menyediakan Informasi Publik yang akurat, benar, dan
-                    tidak menyesatkan
+                    tidak menyesatkan;
                   </li>
                   <li className="pr-misi-plain__item">
                     Untuk melaksanakan kewajiban sebagaimana dimaksud pada angka 2, Badan
                     Publik harus membangun dan mengembangkan sistem informasi dan dokumentasi
                     untuk mengelola Informasi Publik secara baik dan efisien sehingga dapat
-                    diakses dengan mudah
+                    diakses dengan mudah;
                   </li>
                   <li className="pr-misi-plain__item">
                     Badan Publik wajib membuat pertimbangan secara tertulis setiap kebijakan
-                    yang diambil untuk memenuhi hak setiap orang atas Informasi Publik
+                    yang diambil untuk memenuhi hak setiap orang atas Informasi Publik;
                   </li>
                   <li className="pr-misi-plain__item">
                     Pertimbangan sebagaimana dimaksud pada angka 4, antara lain memuat
                     pertimbangan politik, ekonomi, sosial, budaya, dan/atau pertahanan dan
-                    keamanan Negara
+                    keamanan Negara;
                   </li>
                   <li className="pr-misi-plain__item">
                     Dalam rangka memenuhi kewajiban sebagaimana dimaksud pada angka 1 sampai
                     dengan angka 4, Badan Publik dapat memanfaatkan sarana dan/atau media
-                    elektronik dan nonelektronik
+                    elektronik dan nonelektronik.
                   </li>
                 </ol>
 
@@ -175,47 +102,47 @@ export default function PpidKelembagaan() {
                 <ol className="pr-misi-plain" aria-label="Pasal 4 PERKI Nomor 1 Tahun 2010">
                   <li className="pr-misi-plain__item">
                     Menetapkan peraturan mengenai standar prosedur operasional layanan
-                    Informasi Publik
+                    Informasi Publik;
                   </li>
                   <li className="pr-misi-plain__item">
                     Membangun dan mengembangkan sistem informasi dan dokumentasi untuk
-                    mengelola Informasi Publik secara baik dan efisien
+                    mengelola Informasi Publik secara baik dan efisien;
                   </li>
                   <li className="pr-misi-plain__item">
                     Menunjuk dan mengangkat PPID untuk melaksanakan tugas dan tanggung jawab
-                    serta wewenangnya
+                    serta wewenangnya;
                   </li>
                   <li className="pr-misi-plain__item">
                     Menganggarkan pembiayaan secara memadai bagi layanan Informasi Publik
-                    sesuai dengan peraturan perundang-undangan yang berlaku
+                    sesuai dengan peraturan perundang-undangan yang berlaku;
                   </li>
                   <li className="pr-misi-plain__item">
                     Menyediakan sarana dan prasarana layanan Informasi Publik, termasuk papan
                     pengumuman dan meja informasi di setiap kantor Badan Publik, serta situs
-                    resmi bagi Badan Publik Negara
+                    resmi bagi Badan Publik Negara;
                   </li>
                   <li className="pr-misi-plain__item">
-                    Menetapkan standar biaya perolehan salinan Informasi Publik
+                    Menetapkan standar biaya perolehan salinan Informasi Publik;
                   </li>
                   <li className="pr-misi-plain__item">
                     Menetapkan dan memutakhirkan secara berkala Daftar Informasi Publik atas
-                    seluruh Informasi Publik yang dikelola
+                    seluruh Informasi Publik yang dikelola;
                   </li>
                   <li className="pr-misi-plain__item">
-                    Menyediakan dan memberikan Informasi Publik
+                    Menyediakan dan memberikan Informasi Publik;
                   </li>
                   <li className="pr-misi-plain__item">
                     Memberikan tanggapan atas keberatan yang diajukan oleh Pemohon Informasi
-                    Publik yang mengajukan keberatan
+                    Publik yang mengajukan keberatan;
                   </li>
                   <li className="pr-misi-plain__item">
                     Membuat dan mengumumkan laporan tentang layanan Informasi Publik sesuai
                     dengan Peraturan ini serta menyampaikan salinan laporan kepada Komisi
-                    Informasi
+                    Informasi, dan;
                   </li>
                   <li className="pr-misi-plain__item">
                     Melakukan evaluasi dan pengawasan terhadap pelaksanaan layanan Informasi
-                    Publik pada instansinya
+                    Publik pada instansinya.
                   </li>
                 </ol>
 
@@ -223,7 +150,7 @@ export default function PpidKelembagaan() {
             </section>
 
             {/* ═══════════════════════════════════════════
-                SECTION 3 — Jenis Informasi Publik
+                SECTION 2 — Jenis Informasi Publik
             ═══════════════════════════════════════════ */}
             <section className="pr-section" aria-labelledby="heading-jenis">
               <h2 className="pr-section__heading" id="heading-jenis">
@@ -234,24 +161,24 @@ export default function PpidKelembagaan() {
                   <li className="pr-misi-plain__item">
                     <strong>Informasi yang wajib disediakan dan diumumkan secara berkala</strong>{' '}
                     adalah informasi yang telah dikuasai dan didokumentasikan oleh Badan Publik
-                    untuk diumumkan secara teratur dan rutin tanpa ada permintaan
+                    untuk diumumkan secara teratur dan rutin tanpa ada permintaan;
                   </li>
                   <li className="pr-misi-plain__item">
-                    <strong>Informasi yang wajib diumumkan secara serta merta</strong> adalah
+                    <strong>Informasi yang wajib diumumkan secara serta merta</strong>, adalah
                     informasi yang apabila tidak disampaikan dapat mengancam hajat hidup orang
                     banyak dan ketertiban umum yang berhubungan dengan tupoksi Badan Publik
-                    tanpa ada permintaan
+                    tanpa ada permintaan;
                   </li>
                   <li className="pr-misi-plain__item">
-                    <strong>Informasi yang wajib tersedia setiap saat</strong> adalah informasi
-                    yang telah dikuasai dan didokumentasikan oleh Badan Publik serta telah
+                    <strong>Informasi yang wajib tersedia setiap saat</strong>, adalah informasi
+                    yang telah dikuasasi dan didokumentasikan oleh Badan Publik serta telah
                     dinyatakan terbuka sebagai informasi yang dapat diakses oleh pengguna
-                    informasi bilamana ada permintaan
+                    informasi bilamana ada permintaan;
                   </li>
                   <li className="pr-misi-plain__item">
-                    <strong>Informasi yang dikecualikan</strong> adalah informasi yang dikuasai
+                    <strong>Informasi yang dikecualikan</strong>, adalah informasi yang dikuasai
                     dan didokumentasikan oleh Badan Publik yang tidak dapat diakses oleh
-                    pemohon informasi berdasarkan alasan-alasan pengecualian
+                    pemohon informasi berdasarkan alasan-alasan pengecualian.
                   </li>
                 </ol>
               </div>

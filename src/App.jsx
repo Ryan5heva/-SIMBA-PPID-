@@ -11,6 +11,8 @@ import PpidDikecualikan from './pages/PpidDikecualikan';
 import PpidLaporanAkses from './pages/PpidLaporanAkses';
 import PpidSeputar from './pages/PpidSeputar';
 import PpidKelembagaan from './pages/PpidKelembagaan';
+import PpidVisiMisi from './pages/PpidVisiMisi';
+import PpidStrukturOrganisasi from './pages/PpidStrukturOrganisasi';
 import PpidMaklumatPelayanan from './pages/PpidMaklumatPelayanan';
 import PpidLayananInformasi from './pages/PpidLayananInformasi';
 import PpidPengajuanKeberatan from './pages/PpidPengajuanKeberatan';
@@ -32,6 +34,8 @@ function App() {
         {/* ── Profil PPID ── */}
         <Route path="/profil" element={<PpidSeputar />} />
         <Route path="/profil/kelembagaan" element={<PpidKelembagaan />} />
+        <Route path="/profil/visi-misi-ppid" element={<PpidVisiMisi />} />
+        <Route path="/profil/struktur-organisasi-ppid" element={<PpidStrukturOrganisasi />} />
         <Route path="/profil/maklumat-pelayanan" element={<PpidMaklumatPelayanan />} />
 
         {/* ── Layanan Informasi ── */}
